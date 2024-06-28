@@ -22,8 +22,8 @@ dependencyResolutionManagement {
 However, the credentials are not used, as the dependency can't be resolved and logs contains lines such as:
 
 ```
-DEBUG: GET maven.pkg.github.com/org/repo/com/secret/library/confidential/maven-metadata.xml = (code=ERR_NON_2XX_3XX_RESPONSE, statusCode=401 retryCount=0, duration=238) (repository=Org/repo)
-DEBUG: Dependency lookup unauthorized. Please add authentication with a hostRule for maven.pkg.github.com/org/repo/com/secret/library/confidential/maven-metadata.xml (repository=Org/repo)
+DEBUG: GET  https://maven.pkg.github.com/org/repo/com/secret/library/confidential/maven-metadata.xml = (code=ERR_NON_2XX_3XX_RESPONSE, statusCode=401 retryCount=0, duration=238) (repository=Org/repo)
+DEBUG: Dependency lookup unauthorized. Please add authentication with a hostRule for  https://maven.pkg.github.com/org/repo/com/secret/library/confidential/maven-metadata.xml (repository=Org/repo)
 ```
 
 It works correctly after adding a host rule with the credentials, but that means duplicating the information:
